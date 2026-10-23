@@ -10,6 +10,8 @@ Antes de escribir, modificar o revisar código, lee las guías correspondientes 
 - Código React: `harness/development/react.md`, `harness/security/react.md`, `harness/technologies/react.md`, `harness/guardrails/react.md`.
 - Documentación de código: `harness/documentation/code.md`.
 - Documentación de proyectos: `harness/documentation/projects.md`.
+- Arquitectura de backend: `harness/architecture/python.md`. Los proyectos de backend siguen DDD.
+- Arquitectura de frontend: `harness/architecture/react.md`. Los proyectos de frontend se organizan por funcionalidad.
 - Ramas, commits y PR: `harness/development/git.md`.
 - Licencias: `harness/licenses/`.
 
@@ -21,6 +23,7 @@ Si una tecnología no aparece en la guía de tecnologías admitidas, no la uses.
 - **Idioma**: el código fuente, incluidos nombres de módulos, clases, métodos, propiedades, variables y constantes, va en inglés. Los docstrings, los comentarios y la documentación van en español. Los mensajes de log y las excepciones van en inglés.
 - **Serialización JSON**: las propiedades expuestas en JSON van en `camelCase`, nunca en `snake_case`.
 - **Pruebas**: el código nuevo o modificado necesita pruebas unitarias, de integración y end-to-end según corresponda. La cobertura del proyecto debe ser al menos del 80 %.
+- **Arquitectura DDD**: los proyectos de backend siguen DDD y las capas de `harness/architecture/python.md`. Al crear una entidad del dominio, crea en el mismo cambio su contrato de repositorio, su modelo de persistencia, su repositorio de SQLAlchemy y su mapper, con sus pruebas.
 - **Documentación**: los cambios que afecten a un proyecto deben actualizar su documentación en el mismo PR.
 - **Secretos**: nunca escribas contraseñas, claves, tokens ni otra información sensible en el código, en la documentación ni en los ejemplos.
 
